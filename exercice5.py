@@ -14,7 +14,7 @@ def verification(montant):
                 if montant >= 20:  # Je vérifie que le montant restant est supérieur ou égal à 20
                     nb20 = math.floor(montant / 20)  # Divise par 20 arrondi vers le bas pour avoir le nombre de billets de 20
                     montant -= (20*nb20)  # Je diminue le montant des billets de 20
-                    if montant >= 10:  # Je vérifie que le montant restant est supérieur ou égal à 10
+                    if montant == 10:  # Je vérifie que le montant restant est égal à 10 (Mathématiquemet si il reste quelque chose il ne peut rester que 10)
                         nb10 = 1  # Mathématiquement il ne reste forcément que 1 billet de 10 à ajouter
                         if nb50 > 1 and nb20 > 1:  # Vérification du nombre de billet pour affichage au pluriel ou singulier
                             return(f"Billets distribués:\n- {nb50} billets de 50€\n- {nb20} billets de 20€\n- {nb10} billet de 10€")

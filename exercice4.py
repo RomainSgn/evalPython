@@ -6,7 +6,7 @@ class Livre:
         self.disponibilite = disponibilite
     
     def __str__(self):
-        if self.disponibilite:
+        if self.disponibilite:  # Si disponnibilité = True
             return(f"- Titre : {self.titre}\n- Auteur : {self.auteur}\n- Année de publication : {self.annee_publication}\n- Disponnibilité : Disponible")
         else:
             return(f"- Titre : {self.titre}\n- Auteur : {self.auteur}\n- Année de publication : {self.annee_publication}\n- Disponnibilité : Indisponible")
